@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { StyledContainer } from "./PageStyles";
 
 export const HomeContainer = styled(StyledContainer)`
   position: relative;
   background-color: ${props => props.theme.primaryBody};
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 
   &::before {
     content: "";
@@ -28,15 +29,54 @@ export const HomeContent = styled.div`
   align-items: center;
   color: ${props => props.theme.primaryText};
   padding: 0 1.5rem;
+
+  height: 60vh;
+  // Temporary
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
+`
+
+const float = keyframes`
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+`
+
+export const HomeCenter = styled.div`
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+  svg {
+    animation: ${float} 3s ease-in-out infinite;
+  }
 `
 
 export const HomeSplit = styled.div`
-
+  img {
+    width: 100%;
+  }
 `
 
 export const HomeText = styled.div`
-  color: ${props => props.theme.primaryText};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   line-height: 1.6;
-  font-size: 3em;
+  color: ${props => props.theme.primaryText};
+  font-size: calc(1em + 1.5vw);
   font-family: ${props => props.theme.fontFamily};
+
+  &>*:last-child {
+    color: lightgray;
+  }
 `
