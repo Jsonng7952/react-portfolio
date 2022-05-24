@@ -2,24 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { StyledContainer } from "./PageStyles";
 
 export const HomeContainer = styled(StyledContainer)`
-  position: relative;
-  background-color: ${props => props.theme.primaryBody};
-  height: 100vh;
-  width: 100vw;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.1;
-    background-size: 20px 20px;
-    background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
-  }
 `
 
 export const HomeContent = styled.div`
@@ -29,8 +12,8 @@ export const HomeContent = styled.div`
   align-items: center;
   color: ${props => props.theme.primaryText};
   padding: 0 1.5rem;
+  height: 86vh;
 
-  height: 60vh;
   // Temporary
   @media (max-width: 768px) {
     flex-direction: column-reverse;
@@ -56,12 +39,35 @@ export const HomeCenter = styled.div`
   outline: none;
   background-color: transparent;
 
+  top: ${props => props.click ? "90%" : "50%"};
+  left: ${props => props.click ? "90%" : "50%"};
+  transform: translate(-50%, -50%);
+  transition: all 2s ease;
+
   svg {
     animation: ${float} 3s ease-in-out infinite;
   }
 `
 
+const appear = keyframes`
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+`
+
 export const HomeSplit = styled.div`
+  opacity: 0;
+  display: ${props => props.click ? "inline-block" : "none"};
+  animation: ${appear} 0.5s ease-in 1s;
+  animation-fill-mode: forwards;
+  animation-direction: ${props => props.click ? "normal" : "reverse"};
+
   img {
     width: 100%;
   }
