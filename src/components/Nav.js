@@ -2,12 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { LinkContainer, NavContainer, LogoLink, TextLink } from './styles/Nav.styled';
 
-function Nav() {
+function Nav(props) {
   return (
     <NavContainer>
-      <Link to='/'>
-        <LogoLink>JN</LogoLink>
-      </Link>
+        <LogoLink onClick={props.themeChange}>JN</LogoLink>
       <LinkContainer>
         <Link to='/'>
           <TextLink>[ HOME ]</TextLink>  
