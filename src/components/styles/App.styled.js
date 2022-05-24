@@ -6,4 +6,5 @@ export const AppContainer = styled.div`
   position: relative;
   background-color: ${props => props.theme.primaryBody};
   height: 100vh;
+  overflow: hidden;
 `
