@@ -17,12 +17,13 @@ export const LinkContainer = styled.ul`
 `
 
 export const LogoLink = styled.h1`
+  cursor: pointer;
   display: inline-block;
   color: ${props => props.theme.primaryText};
 `
 
 export const TextLink = styled.li`
   list-style: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: ${props => props.theme.primaryText};
 `
