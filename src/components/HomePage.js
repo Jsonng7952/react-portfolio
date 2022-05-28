@@ -30,7 +30,7 @@ function HomePage() {
           </div>
         </HomeSplit>       
         <HomeCenter click={click}>
-          <ProfileLogo onClick={handleClick} width={click ? 120 : '300'} height={click ? 120 : '300'} fill='currentColor'/>
+          <ProfileLogo onClick={handleClick} width={click ? 100 : '300'} height={click ? 100 : '300'} fill='currentColor'/>
         </HomeCenter>
       </HomeContent>
     </HomeContainer>
