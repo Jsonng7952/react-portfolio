@@ -8,16 +8,16 @@ function Nav(props) {
         <LogoLink onClick={props.themeChange}>JN</LogoLink>
       <LinkContainer>
         <Link to='/'>
-          <TextLink>[ HOME ]</TextLink>  
+          <TextLink>HOME</TextLink>  
         </Link>
         <Link to='/about'>
-          <TextLink>[ ABOUT ]</TextLink>        
+          <TextLink>ABOUT</TextLink>        
         </Link>
         <Link to='/projects'>
-          <TextLink>[ PROJECTS ]</TextLink>        
+          <TextLink>PROJECTS</TextLink>        
         </Link>
         <Link to='/contact'>
-          <TextLink>[ CONTACT ]</TextLink>        
+          <TextLink>CONTACT</TextLink>        
         </Link>
       </LinkContainer>
     </NavContainer>
