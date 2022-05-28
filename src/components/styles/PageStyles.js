@@ -13,8 +13,8 @@ const fadeInLeft = keyframes`
 
 export const StyledHeader = styled.h2`
   position: relative;
-  color: ${props => props.theme.secondText};
-  background-color: ${props => props.theme.secondBody};
+  color: ${props => props.theme.inverseText};
+  background-color: ${props => props.theme.inverseBody};
   display: inline-block;
   padding: 0 1.5rem;
   margin: 2rem 0;
@@ -28,7 +28,6 @@ export const StyledHeader = styled.h2`
 export const StyledContainer = styled.div`
   position: relative;
   background-color: ${props => props.theme.primaryBody};
-  height: 100%;
 
   &::before {
     content: "";
