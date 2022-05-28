@@ -2,7 +2,8 @@ import styled, { keyframes } from "styled-components";
 import { StyledContainer } from "./PageStyles";
 
 export const HomeContainer = styled(StyledContainer)`
-
+  font-family: ${props => props.theme.fontFamily};
+  flex-grow: 1;
 `
 
 export const HomeContent = styled.div`
@@ -12,7 +13,7 @@ export const HomeContent = styled.div`
   align-items: center;
   color: ${props => props.theme.primaryText};
   padding: 0 1.5rem;
-  height: 86vh;
+  height: 70vh;
 
   // Temporary
   @media (max-width: 768px) {
@@ -39,8 +40,8 @@ export const HomeCenter = styled.div`
   outline: none;
   background-color: transparent;
 
-  top: ${props => props.click ? "90%" : "50%"};
-  left: ${props => props.click ? "90%" : "50%"};
+  top: ${props => props.click ? "85%" : "50%"};
+  left: ${props => props.click ? "85%" : "50%"};
   transform: translate(-50%, -50%);
   transition: all 2s ease;
 
@@ -69,7 +70,8 @@ export const HomeSplit = styled.div`
   animation-direction: ${props => props.click ? "normal" : "reverse"};
 
   img {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
   }
 `
 
@@ -80,7 +82,6 @@ export const HomeText = styled.div`
   line-height: 1.6;
   color: ${props => props.theme.primaryText};
   font-size: calc(1em + 1.5vw);
-  font-family: ${props => props.theme.fontFamily};
 
   &>*:last-child {
     color: lightgray;
