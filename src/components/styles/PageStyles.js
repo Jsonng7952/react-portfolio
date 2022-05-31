@@ -16,8 +16,8 @@ export const StyledHeader = styled.h2`
   color: ${props => props.theme.inverseText};
   background-color: ${props => props.theme.inverseBody};
   display: inline-block;
-  padding: 0 1.5rem;
-  margin: 2rem 0;
+  padding: 0 1.5em;
+  margin: 1em 0;
   line-height: 0.8;
   font-weight: normal;
   font-family: ${props => props.theme.fontFamily};
