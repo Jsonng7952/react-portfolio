@@ -12,7 +12,7 @@ export const HomeContent = styled.div`
   justify-content: center;
   align-items: center;
   color: ${props => props.theme.primaryText};
-  padding: 0 1.5rem;
+  padding: 0 1.5em;
   height: 70vh;
 
   // Temporary
@@ -78,12 +78,23 @@ export const HomeSplit = styled.div`
 export const HomeText = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: flex-start;
   line-height: 1.6;
   color: ${props => props.theme.primaryText};
-  font-size: calc(1em + 1.5vw);
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
 
   &>*:last-child {
-    color: lightgray;
+    color:  ${props => props.theme.primaryText};
+
+    padding: 0 1em;
+    background-image: linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
+                      linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
+                      linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
+                      linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText});
+    background-repeat: no-repeat;
+    background-size: 8px 1px;
+    background-position: top left, top right, bottom left, bottom right;
+    border: solid ${props => props.theme.primaryText};
+    border-width: 0 1px;   
   }
 `
