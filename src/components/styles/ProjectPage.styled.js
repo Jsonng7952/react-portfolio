@@ -4,29 +4,29 @@ import { StyledContainer } from "./PageStyles";
 export const ProjectContainer = styled(StyledContainer)`
   font-family: ${props => props.theme.fontFamily};
   flex-grow: 1;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 `
 
 export const ProjectContent = styled.div`
   position: relative;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   color: ${props => props.theme.primaryText};
-  padding: 1rem 2rem;
-  gap: 2rem;
-  overflow-y: auto;
-  height: 80vh;
+  padding: 0 2em;
+  gap: 1em;
 
-  border-top: 2px solid ${props => props.theme.primaryText};
-  border-bottom: 2px solid ${props => props.theme.primaryText};
-
-  &::-webkit-scrollbar {
-    display: none;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
   }
-
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 `
 
 const fadeInLeft = keyframes`
@@ -41,33 +41,33 @@ const fadeInLeft = keyframes`
 `
 
 export const ProjectCard = styled.div`
-  border-top: 1px solid ${props => props.theme.primaryText};
-  border-bottom: 1px solid ${props => props.theme.primaryText};
-  padding: 1rem;
-  max-width: 1000px;
+  padding: 1em;
+  max-width: 2000px;
 
   opacity: 0;
   animation: ${fadeInLeft} 1.5s ease 0.8s;
   animation-fill-mode: forwards;
 `
 
-export const ProjectTitle = styled.h1`
+export const ProjectTitle = styled.h2`
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
   text-align: center;
 `
 
 export const ProjectSplit = styled.div`
   display: flex;
-  padding: 1rem;
-  gap: 2rem;
+  padding: 1em;
+  gap: 2em;
 
   // Temporary
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 1em;
   }
 `
 
 export const ProjectImage = styled.div`
-  padding: 1rem;
+  padding: 1em;
   display: flex;
   justify-content: center;
   flex: 1;
@@ -92,7 +92,7 @@ export const ProjectImage = styled.div`
 `
 
 export const ProjectDescription = styled.div`
-  padding: 1rem;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,12 +113,13 @@ export const ProjectDescription = styled.div`
   background-size: 20px 20px; 
   
   &>*:first-child {
-    font-size: calc(1em + 0.5vw);
-    padding-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+    padding-bottom: 0.5em;
   }
 
   &>*:last-child {
     color: darkgrey;
+    font-size: clamp(0.8rem, 1.5vw, 1.5rem);
     font-style: italic;
   }
 `
@@ -126,19 +127,19 @@ export const ProjectDescription = styled.div`
 export const ProjectLink = styled.div`
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1em;
 
   a {
     color: ${props => props.theme.primaryText};
     font-style: italic;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
     
-    padding: 0 1rem;
+    padding: 0 1em;
     background-image: linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
-                    linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
-                    linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
-                    linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText});
+                      linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
+                      linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText}),
+                      linear-gradient(${props => props.theme.primaryText}, ${props => props.theme.primaryText});
     background-repeat: no-repeat;
     background-size: 8px 1px;
     background-position: top left, top right, bottom left, bottom right;
