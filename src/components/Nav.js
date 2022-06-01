@@ -1,25 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { LinkContainer, NavContainer, LogoLink, TextLink } from './styles/Nav.styled';
+import { LinkContainer, NavContainer, LogoLink, TextLink, LinkHamburger, NavButton } from './styles/Nav.styled';
 
 function Nav(props) {
+  const [click, setClick] = useState(false);
+
+  const displayNav = () => {
+    setClick(!click);
+  };
+
   return (
     <NavContainer>
-        <LogoLink onClick={props.themeChange}>JN</LogoLink>
-      <LinkContainer>
+      <LogoLink onClick={props.themeChange}>JN</LogoLink>
+      <LinkContainer click={click}>
         <Link to='/'>
-          <TextLink>HOME</TextLink>  
+          <TextLink onClick={displayNav}>HOME</TextLink>  
         </Link>
         <Link to='/about'>
-          <TextLink>ABOUT</TextLink>        
+          <TextLink onClick={displayNav}>ABOUT</TextLink>        
         </Link>
         <Link to='/projects'>
-          <TextLink>PROJECTS</TextLink>        
-        </Link>
-        <Link to='/contact'>
-          <TextLink>CONTACT</TextLink>        
+          <TextLink onClick={displayNav}>PROJECTS</TextLink>        
         </Link>
       </LinkContainer>
+      <NavButton onClick={displayNav}>
+        <LinkHamburger />        
+      </NavButton>
     </NavContainer>
   )
 }
