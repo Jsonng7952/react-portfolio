@@ -7,6 +7,7 @@ import { GlobalStyle } from './components/styles/Global';
 import { ThemeProvider } from 'styled-components';
 import { DarkTheme, LightTheme } from './components/styles/Theme'
 import Nav from './components/Nav';
+import Footer from './components/Footer'
 import { AppContainer } from './components/styles/App.styled';
 
 function App() {
@@ -30,7 +31,8 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/projects" element={<ProjectPage />} />
-            </Routes>            
+            </Routes>       
+            <Footer />     
           </AppContainer>
         </Router>     
       </ThemeProvider>
