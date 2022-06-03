@@ -47,6 +47,10 @@ export const ProjectCard = styled.div`
   opacity: 0;
   animation: ${fadeInLeft} 1.5s ease 0.8s;
   animation-fill-mode: forwards;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 export const ProjectTitle = styled.h2`

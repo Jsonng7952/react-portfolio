@@ -25,6 +25,10 @@ export const LinkContainer = styled.ul`
 
   transform: ${props => props.click ? "translateX(0%)" : "translateX(100%)"};
   transition: .25s 0s ease-in-out;
+
+  a {
+    text-decoration: none;
+  }
 `
 
 export const LogoLink = styled.h1`
