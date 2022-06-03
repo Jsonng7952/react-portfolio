@@ -8,5 +8,20 @@ export const FooterContainer = styled.div`
   color: ${props => props.theme.primaryText};
   background-color: ${props => props.theme.primaryBody};
   font-family: ${props => props.theme.fontFamily};
-  border: 1px solid red;
+`
+
+export const ContactContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  flex: 1;
+
+  svg {
+    cursor: pointer;
+  }
+
+  a {
+    color: inherit;
+  }
 `
