@@ -9,8 +9,8 @@ import {
   ProjectDescription, 
   ProjectLink, 
   ProjectSplit } from './styles/ProjectPage.styled';
-import FortniteShop from '../assets/images/fortnite-shop.png'
-
+import FortniteShop from '../assets/images/fortnite-shop.png';
+import StockProject from '../assets/images/stock-project.png';
 
 function ProjectPage() {
   return (
@@ -30,8 +30,8 @@ function ProjectPage() {
             </ProjectDescription>            
           </ProjectSplit>
           <ProjectLink>
-            <a href="https://jsonng7952.github.io/fortnite-shopping-cart/">Live Demo</a>
-            <a href="https://github.com/Jsonng7952/fortnite-shopping-cart">Repository</a>
+            <a target="_blank" rel='noreferrer' href="https://jsonng7952.github.io/fortnite-shopping-cart/">Live Demo</a>
+            <a target="_blank" rel='noreferrer' href="https://github.com/Jsonng7952/fortnite-shopping-cart">Repository</a>
           </ProjectLink>
         </ProjectCard>       
         {/*Project 2*/}
@@ -39,7 +39,7 @@ function ProjectPage() {
           <ProjectTitle>Project 2</ProjectTitle>
           <ProjectSplit>
             <ProjectImage>
-              <img src={FortniteShop} alt='Fortnite Shop'></img>
+              <img src={StockProject} alt='Fortnite Shop'></img>
             </ProjectImage>
             <ProjectDescription>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis dolor odio, sit amet hendrerit dolor maximus quis. Suspendisse feugiat eu ex tempus consectetur.</p>  
@@ -56,7 +56,7 @@ function ProjectPage() {
           <ProjectTitle>Project 3</ProjectTitle>
           <ProjectSplit>
             <ProjectImage>
-              <img src={FortniteShop} alt='Fortnite Shop'></img>
+              <img src={StockProject} alt='Fortnite Shop'></img>
             </ProjectImage>
             <ProjectDescription>
               <p>Quisque porttitor mattis dui a ornare. Nulla vel dapibus leo, quis eleifend ligula. Proin imperdiet efficitur diam, eget imperdiet mauris vestibulum a. Vivamus pulvinar nisi eros, ac dictum eros porta ac. Phasellus fringilla tellus est, sed hendrerit nunc rutrum vel. Sed cursus lectus vel justo ullamcorper, eu dictum libero placerat.</p>  
@@ -73,7 +73,7 @@ function ProjectPage() {
           <ProjectTitle>Project 4</ProjectTitle>
           <ProjectSplit>
             <ProjectImage>
-              <img src={FortniteShop} alt='Fortnite Shop'></img>
+              <img src={StockProject} alt='Fortnite Shop'></img>
             </ProjectImage>
             <ProjectDescription>
               <p>Quisque porttitor mattis dui a ornare. Nulla vel dapibus leo, quis eleifend ligula. Proin imperdiet efficitur diam, eget imperdiet mauris vestibulum a.</p>  
