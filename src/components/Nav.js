@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { LinkContainer, NavContainer, LogoLink, TextLink, LinkHamburger, NavButton } from './styles/Nav.styled';
+import { LinkContainer, NavContainer, LogoLink, TextLink, OpenLinkHamburger, CloseLinkHamburger, NavButton} from './styles/Nav.styled';
 
 function Nav(props) {
   const [click, setClick] = useState(false);
@@ -24,7 +24,8 @@ function Nav(props) {
         </Link>
       </LinkContainer>
       <NavButton onClick={displayNav}>
-        <LinkHamburger />        
+        <OpenLinkHamburger click={click} />       
+        <CloseLinkHamburger click={click} /> 
       </NavButton>
     </NavContainer>
   )

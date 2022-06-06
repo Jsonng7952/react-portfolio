@@ -64,13 +64,16 @@ export const NavButton = styled.button`
   z-index: 1000;
 `
 
-export const LinkHamburger = styled.span`
+export const OpenLinkHamburger = styled.span`
   width: 1.5em;
   height: 3px;
   border-radius: 1em;
   display: block;
   position: relative;
   background-color: ${props => props.theme.primaryText};
+
+  transition: ${props => props.click ? "all 0.5s ease-in-out" : "all 0.5s ease-in-out 0.3s"};
+  background: ${props => props.click ? "none" : ""};
 
   &::before,
   &::after {
@@ -81,15 +84,57 @@ export const LinkHamburger = styled.span`
     position: absolute;
     left: 0;
     right: 0;
+    
+    transition: ${props => props.click ? "all 0.5s ease-in-out" : "all 0.5s ease-in-out 0.3s"};
   }
 
   &::before {
     width: 2em;
     bottom: 6px;
+    // On Click
+    transform: ${props => props.click ? "translateX(10px)" : "translateX(0px)"};
+    background: ${props => props.click ? "none" : ""};
   }
 
   &::after {
     width: 1em;
     top: 6px;
+    // On Click
+    transform: ${props => props.click ? "translateX(-10px)" : "translateX(0px)"};
+    background: ${props => props.click ? "none" : ""};
+  }
+`
+
+export const CloseLinkHamburger = styled.span`
+  display: block;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: ${props => props.theme.primaryText};
+    height: 3px;
+    border-radius: 1em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    
+    transition: ${props => props.click ? "all 0.5s ease-in-out 0.3s" : "all 0.5s ease-in-out"};
+  }
+
+  &::before {
+    width: 2em;
+    bottom: 6px;
+    // On Click
+    transform: ${props => props.click ? "translateY(6px) rotate(45deg) " : ""};
+    background: ${props => props.click ? "" : "none"};
+  }
+
+  &::after {
+    width: ${props => props.click ? "2em" : "1em"};
+    top: 3px;
+    // On Click
+    transform: ${props => props.click ? "translateY(-6px) rotate(-45deg) " : ""};
+    background: ${props => props.click ? "" : "none"};
   }
 `
