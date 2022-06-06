@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { StyledContainer } from "./PageStyles";
 
+
 export const ProjectContainer = styled(StyledContainer)`
   font-family: ${props => props.theme.fontFamily};
   flex-grow: 1;
@@ -11,22 +12,6 @@ export const ProjectContainer = styled(StyledContainer)`
   }
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-`
-
-export const ProjectContent = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  color: ${props => props.theme.primaryText};
-  padding: 0 2em;
-  gap: 1em;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 0;
-  }
 `
 
 const fadeInLeft = keyframes`
@@ -40,13 +25,49 @@ const fadeInLeft = keyframes`
   }
 `
 
+export const ProjectContent = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: ${props => props.theme.primaryText};
+  padding: 0 2em;
+  gap: 1em;
+
+  &>:nth-child(1) {
+    opacity: 0;
+    animation: ${fadeInLeft} 1.5s ease 0.8s;
+    animation-fill-mode: forwards;    
+  }
+
+  &>:nth-child(2) {
+    opacity: 0;
+    animation: ${fadeInLeft} 1.5s ease 1.6s;
+    animation-fill-mode: forwards;        
+  }
+
+  &>:nth-child(3) {
+    opacity: 0;
+    animation: ${fadeInLeft} 1.5s ease 2.4s;
+    animation-fill-mode: forwards;        
+  }
+
+  &>:nth-child(4) {
+    opacity: 0;
+    animation: ${fadeInLeft} 1.5s ease 3.2s;
+    animation-fill-mode: forwards;        
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+  }
+`
+
 export const ProjectCard = styled.div`
   padding: 1em;
   max-width: 2000px;
-
-  opacity: 0;
-  animation: ${fadeInLeft} 1.5s ease 0.8s;
-  animation-fill-mode: forwards;
 
   a {
     text-decoration: none;

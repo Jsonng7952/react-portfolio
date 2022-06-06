@@ -50,22 +50,21 @@ export const HomeCenter = styled.div`
   }
 `
 
-const appear = keyframes`
-	0% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 0.5;
-	}
-	100% {
-		opacity: 1;
-	}
+const fadeInLeft = keyframes`
+  0% {
+     opacity: 0;
+     transform: translateX(-50px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
 `
 
 export const HomeSplit = styled.div`
   opacity: 0;
   display: ${props => props.click ? "inline-block" : "none"};
-  animation: ${appear} 0.5s ease-in 1s;
+  animation: ${fadeInLeft} 1.5s ease 1s;
   animation-fill-mode: forwards;
   animation-direction: ${props => props.click ? "normal" : "reverse"};
 
@@ -96,5 +95,7 @@ export const HomeText = styled.div`
     background-position: top left, top right, bottom left, bottom right;
     border: solid ${props => props.theme.primaryText};
     border-width: 0 1px;   
+
+    text-decoration: none;
   }
 `

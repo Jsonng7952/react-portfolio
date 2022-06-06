@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { StyledContainer } from "./PageStyles";
 
 export const AboutContainer = styled(StyledContainer)`
@@ -9,6 +9,17 @@ export const AboutContainer = styled(StyledContainer)`
 export const AboutContent = styled.div`
   display: flex;
   justify-content: center;
+`
+
+const fadeInLeft = keyframes`
+  0% {
+     opacity: 0;
+     transform: translateX(-50px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
 `
 
 export const AboutSection = styled.section`
@@ -30,6 +41,10 @@ export const AboutSection = styled.section`
     grid-column: 2 / 3;
     max-width: 100%;
     height: auto;
+
+    opacity: 0;
+    animation: ${fadeInLeft} 1.5s ease 2.4s;
+    animation-fill-mode: forwards;
   }
 
   // Temporary
@@ -47,12 +62,20 @@ export const AboutSection = styled.section`
 
 export const AboutText = styled.div`
   font-size: clamp(0.8rem, 1.5vw, 2rem);
+
+  opacity: 0;
+  animation: ${fadeInLeft} 1.5s ease 0.8s;
+  animation-fill-mode: forwards;
 `
 
 export const AboutSkills = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
+
+  opacity: 0;
+  animation: ${fadeInLeft} 1.5s ease 1.6s;
+  animation-fill-mode: forwards;
 `
 
 export const SkillContainer = styled.div`
