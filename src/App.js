@@ -24,7 +24,7 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Router>
+        <Router basename="/react-portfolio">
           <AppContainer>
             <Nav themeChange={themeChange}/>
             <Routes>  
