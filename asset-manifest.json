@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/react-portfolio/static/js/main.821299ef.js",
+    "static/media/fortnite-shop.png": "/react-portfolio/static/media/fortnite-shop.331b5f67e32f51a13920.png",
+    "static/media/stock-project.png": "/react-portfolio/static/media/stock-project.6d4a96e0d4c29ffd4d38.png",
+    "static/media/profile-full.png": "/react-portfolio/static/media/profile-full.3fdb4c4c7f803226f45f.png",
+    "static/media/profile-head.png": "/react-portfolio/static/media/profile-head.3507703635944922d196.png",
+    "index.html": "/react-portfolio/index.html",
+    "main.821299ef.js.map": "/react-portfolio/static/js/main.821299ef.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.821299ef.js"
+  ]
+}
