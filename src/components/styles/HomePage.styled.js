@@ -40,6 +40,7 @@ export const HomeCenter = styled.div`
   outline: none;
   background-color: transparent;
 
+  // On click shrink icon and move to bottom right
   top: ${props => props.click ? "85%" : "50%"};
   left: ${props => props.click ? "85%" : "50%"};
   transform: translate(-50%, -50%);
