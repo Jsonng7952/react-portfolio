@@ -98,7 +98,7 @@ export const ProjectImage = styled.div`
   flex: 1;
 
   border: 1px solid grey;
-    background:
+  background:
     linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
     linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
     linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
@@ -107,8 +107,8 @@ export const ProjectImage = styled.div`
     linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
     linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
     linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%;
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 
   img {
     max-width: 100%;
@@ -126,14 +126,14 @@ export const ProjectDescription = styled.div`
 
   border: 1px solid grey;
   background:
-  linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
-  linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
-  linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
-  linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%,
-  linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
-  linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
-  linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
-  linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%;
+    linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
+    linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%;
   background-repeat: no-repeat;
   background-size: 20px 20px; 
   
