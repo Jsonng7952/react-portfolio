@@ -62,10 +62,24 @@ export const AboutSection = styled.section`
 
 export const AboutText = styled.div`
   font-size: clamp(0.8rem, 1.5vw, 2rem);
-
+  padding: 1em;
+  margin-bottom: 1em;
   opacity: 0;
   animation: ${fadeInLeft} 1.5s ease 0.8s;
   animation-fill-mode: forwards;
+
+  border: 1px solid grey;
+  background:
+    linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
+    linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 `
 
 export const AboutSkills = styled.div`
@@ -76,6 +90,19 @@ export const AboutSkills = styled.div`
   opacity: 0;
   animation: ${fadeInLeft} 1.5s ease 1.6s;
   animation-fill-mode: forwards;
+
+  border: 1px solid grey;
+  background:
+    linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
+    linear-gradient(to right, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
+    linear-gradient(to left, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 0 0,
+    linear-gradient(to bottom, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 0 100%,
+    linear-gradient(to top, ${props => props.theme.primaryText} 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
 `
 
 export const SkillContainer = styled.div`
@@ -95,5 +122,5 @@ export const TechIcon = styled.div`
 
 export const TechName = styled.div`
   text-align: center;
-  font-size: 0.8em;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
 `
