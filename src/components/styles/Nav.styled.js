@@ -123,7 +123,7 @@ export const CloseLinkHamburger = styled.span`
   }
 
   &::before {
-    width: 2em;
+    width: ${props => props.click ? "2em" : "0em"};
     bottom: 6px;
     // On Click
     transform: ${props => props.click ? "translateY(6px) rotate(45deg) " : ""};
@@ -131,7 +131,7 @@ export const CloseLinkHamburger = styled.span`
   }
 
   &::after {
-    width: ${props => props.click ? "2em" : "1em"};
+    width: ${props => props.click ? "2em" : "0em"};
     top: 3px;
     // On Click
     transform: ${props => props.click ? "translateY(-6px) rotate(-45deg) " : ""};
