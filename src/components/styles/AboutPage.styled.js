@@ -4,6 +4,7 @@ import { StyledContainer } from "./PageStyles";
 export const AboutContainer = styled(StyledContainer)`
   font-family: ${props => props.theme.fontFamily};
   flex-grow: 1;
+  overflow: auto;
 `
 
 export const AboutContent = styled.div`
