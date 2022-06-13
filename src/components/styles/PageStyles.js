@@ -28,18 +28,4 @@ export const StyledHeader = styled.h2`
 export const StyledContainer = styled.div`
   position: relative;
   background-color: ${props => props.theme.primaryBody};
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.1;
-    background-size: 20px 20px;
-    background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
-    linear-gradient(to bottom, grey 1px, transparent 1px);
-  }
 `
