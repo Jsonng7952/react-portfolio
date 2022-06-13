@@ -4,7 +4,13 @@ import { StyledContainer } from "./PageStyles";
 export const AboutContainer = styled(StyledContainer)`
   font-family: ${props => props.theme.fontFamily};
   flex-grow: 1;
-  overflow: auto;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 `
 
 export const AboutContent = styled.div`
